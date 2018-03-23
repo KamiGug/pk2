@@ -98,8 +98,25 @@ int main()
 			printf("Podaj tekst do zaszyfrowania(nie dluzszy niz 100 znakow i bez interpunkcji lub bialych znakow):");
 			scanf_s("%s", potrzebne->rozszyfrowany, 100);
 			ZmniejszanieLiter(potrzebne->rozszyfrowany);
-			Szyfrowanie(potrzebne);
-			printf("Zaszyfrowany tekst: %s", potrzebne->zaszyfrowany);
+			short i = 1;
+			int a = 0;
+			while (a < strlen(potrzebne->rozszyfrowany) && i == 1)
+			{
+				if (potrzebne->rozszyfrowany[a] < 'a' || potrzebne->rozszyfrowany[a] > 'z')
+				{
+					i = 0;
+				}
+				a++;
+			}
+			if (i == 1)
+			{
+				Szyfrowanie(potrzebne);
+				printf("Zaszyfrowany tekst: %s", potrzebne->zaszyfrowany);
+			}
+			else
+			{
+				printf("Niepoprawny tekst");
+			}
 			break;
 
 		case 'd':

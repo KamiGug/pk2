@@ -1,0 +1,2 @@
+Liczby: 
+srednia: -nan(ind) 

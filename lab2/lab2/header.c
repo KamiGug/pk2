@@ -2,18 +2,7 @@
 
 void start(void)
 {
-	//printf_s("podaj nazwe pliku do ktorego chcesz zapisac: ");
 	char nazwa[100] = "plik.txt";
-	/*scanf_s("\n%s", nazwa, 100);
-	FILE* plik;
-	fopen_s(&plik, nazwa, "w");
-	if (plik == NULL)
-	{
-		printf_s("Nie mozna tu zapisac.");
-		return;
-	}
-	fclose(plik);*/
-
 	char z;
 	do
 	{
@@ -128,10 +117,6 @@ void ZliczanieElementow(int x, int y, const char* nazwa)
 		}
 		fclose(plik);
 	}
-	/*for (int i = 0; i < y; i++)
-	{
-		free(tablica[i]);
-	}*/
 	free(tablica);
 }
 
@@ -288,7 +273,7 @@ void Trzecie(void)
 	char z;
 	do
 	{
-		printf_s("Wpisz 1, aby dodac.\nWpisz 2, aby odjac pierwsza liczbe od drugiej.\nWpisz 3, aby przeliczyc pierwsza liczbe na inna jednostke.\nWpisz 4, aby przeliczyc druga liczbe na inna jednostke.\nWpisz 5, aby podac nowa pierwsza liczbe.\nWpisz 6, aby podac nowa druga liczbe.\nWpisz 7, aby wyswietlic liczby.\nWpisz q, aby wyjsc.\n");
+		printf_s("Wpisz 1, aby dodac.\nWpisz 2, aby odjac drugą liczbe od pierwszej.\nWpisz 3, aby przeliczyc pierwsza liczbe na inna jednostke.\nWpisz 4, aby przeliczyc druga liczbe na inna jednostke.\nWpisz 5, aby podac nowa pierwsza liczbe.\nWpisz 6, aby podac nowa druga liczbe.\nWpisz 7, aby wyswietlic liczby.\nWpisz q, aby wyjsc.\n");
 		scanf_s("\n%c", &z);
 		switch (z)
 		{

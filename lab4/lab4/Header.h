@@ -12,7 +12,7 @@ typedef enum { flase = 0, true } bool;
 typedef struct buffer
 {
 	stany stan[wielkoscbuffora];
-	bool wyjscie;
+	bool wyjscie[wielkoscbuffora];
 	int czytany;
 	int zapisywany;
 }buffor;

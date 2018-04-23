@@ -10,7 +10,7 @@ void InicjalizujBuffor(buffor** tak)
 void DodajDoBuffora(buffor* tak, stany uzytkownika, bool wyjscie)
 {
 	tak->stan[tak->zapisywany] = uzytkownika;
-	tak->wyjscie = wyjscie;
+	tak->wyjscie[tak->czytany] = wyjscie;
 	tak->zapisywany = (tak->zapisywany + 1) % wielkoscbuffora;
 }
 
@@ -41,8 +41,8 @@ void CzytajZBuffora(buffor* tak, FILE* plik)
 		break;
 
 	case zajety:
-		printf("zajety, wyjscie: %d", tak->wyjscie);
-		if (plik != NULL) fprintf_s(plik, "zajety, wyjscie: %d", tak->wyjscie);
+		printf("zajety, wyjscie: %d", tak->wyjscie[tak->czytany]);
+		if (plik != NULL) fprintf_s(plik, "zajety, wyjscie: %d", tak->wyjscie[tak->czytany]);
 		break;
 
 	case wolny:

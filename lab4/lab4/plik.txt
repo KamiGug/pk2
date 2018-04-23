@@ -1,0 +1,180 @@
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 1
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: zajety, wyjscie: 0
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: polaczenie
+Stan uzytkownika: oczekiwanie
+Stan uzytkownika: wolny
+Stan uzytkownika: nasluch
+Stan uzytkownika: polaczenie

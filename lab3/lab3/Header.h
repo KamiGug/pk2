@@ -42,3 +42,5 @@ struct wiersz* DodajWiersz(struct wiersz** head);
 void DodajKomorke(struct kolumna** head, char* zawartosc, char IleZnaczkow);
 
 void UsunListe(struct wiersz** head);
+
+void WypiszTablice(char*** tablica, int x, int y);

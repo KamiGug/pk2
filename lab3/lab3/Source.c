@@ -4,5 +4,9 @@ int main()
 {
 	start();
 
+	if (_CrtDumpMemoryLeaks())
+	{
+		printf("\nfok");
+	}
 	return 0;
 }

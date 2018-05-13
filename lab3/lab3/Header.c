@@ -53,7 +53,7 @@ void Drugie(void)
 	ListaNaTablice(head, &tablica, &x, &y);
 	UsunListe(&head);
 
-
+	WypiszTablice(tablica, x, y);
 
 	WyczyscTablice(&tablica, x, y);
 
@@ -92,43 +92,45 @@ void ListaNaTablice(struct wiersz* head, char**** tablica, int* x, int* y)
 	int a;
 	for (int i = 0; i < *y; i++)
 	{
-		*tablica[i] = (char**)malloc((*x)*sizeof(char*));
+		(*tablica)[i] = (char**)malloc((*y)*sizeof(char*));
 		tmp = head->komorka;
 		a = 0;
 		while (a < *x && tmp != NULL)
 		{
+			
 			if (tmp->ZawartoscKomorki != NULL)
 			{
-				*tablica[i][a] = (char*)malloc(strlen(tmp->ZawartoscKomorki)+1);
-				strcpy_s(*tablica[i][a], sizeof(*tablica[i][a])+1, tmp->ZawartoscKomorki);
+				(*tablica)[i][a] = (char*)malloc(strlen(tmp->ZawartoscKomorki)*sizeof(char) + 2);
+				strcpy_s((*tablica)[i][a], sizeof((*tablica)[i][a])+1, tmp->ZawartoscKomorki);
 			}
 			else
 			{
-				*tablica[i][a] = NULL;
+				(*tablica)[i][a] = NULL;
 			}
 			tmp = tmp->nast;
+			a++;
 		}
 		for (a; a < *x; a++)
 		{
-			*tablica[i][a] = NULL;
+			(*tablica)[i][a] = NULL;
 		}
 		head = head->nast;
 	}
 
 }
 
-void WyczyscTablice(char**** tablica, int x, int y)
+void WyczyscTablice(char**** tablica, int x, int y)//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 {
 	for (int i = 0; i < y; i++)
 	{
 		for (int j = 0; j < x; j++)
 		{
-			if (*tablica[i][j] != NULL)
+			if ((*tablica)[i][j] != NULL)
 			{
-				free(*tablica[i][j]);
+				free((*tablica)[i][j]);
 			}
 		}
-		free(*tablica[i]);
+		free((*tablica)[i]);
 	}
 	free(*tablica);
 	*tablica = NULL;
@@ -137,6 +139,7 @@ void WyczyscTablice(char**** tablica, int x, int y)
 bool CzytajDoListy(struct wiersz** head, const char* const NazwaPliku)
 {
 	FILE* plik;
+
 	int check = 1;
 	fopen_s(&plik, NazwaPliku, "r");
 	if (plik == NULL)
@@ -146,8 +149,7 @@ bool CzytajDoListy(struct wiersz** head, const char* const NazwaPliku)
 	char buffer[256];
 	int x;
 	char IleCudzyslow;
-	struct wiersz* tmpw;
-	struct kolumna* tmpk;
+	struct wiersz* tmpw = *head;
 	while (check !=EOF)
 	{
 		tmpw = DodajWiersz(head);
@@ -164,13 +166,20 @@ bool CzytajDoListy(struct wiersz** head, const char* const NazwaPliku)
 					IleCudzyslow++;
 				}
 			} while (check!=EOF && (x < 255 && !((*(buffer + x) == ',' || *(buffer + x) == 10 || *(buffer + x) == 13) &&  IleCudzyslow%2 == 0)));
-			*(buffer + x + 1) = '\0';
+			*(buffer + x + 1) = *(buffer + x);
+			*(buffer + x) = '\0';
 			DodajKomorke(&(tmpw->komorka), buffer, IleCudzyslow);
-		} while (check!=EOF && (*(buffer + x) != 10 && *(buffer + x) != 13));
+		} while (check != EOF && (*(buffer + x + 1) != 10 && *(buffer + x + 1) != 13));
 
 	}
 	fclose(plik);
-	
+	if (tmpw!=NULL && tmpw->komorka == NULL)
+	{
+		struct wiersz* tmp = *head;
+		for (tmp; tmp->nast != tmpw; tmp = tmp->nast) {}
+		free(tmpw);
+		tmpw->nast = NULL;
+	}
 	return true;
 }
 
@@ -196,19 +205,29 @@ struct wiersz* DodajWiersz(struct wiersz** head)
 
 void DodajKomorke(struct kolumna** head, char* zawartosc, char IleZnaczkow)
 {
-	char i = 0;
+	int len = strlen(zawartosc);
+	char a;
+	if (zawartosc[0] == '"' && zawartosc[len - 1] == '"')
+	{
+		a = 1;
+	}
+	else
+	{
+		a = 0;
+	}
 	if (*head == NULL)
 	{
 		*head = malloc(sizeof(struct kolumna));
 		(*head)->nast = NULL;
-		if (strlen(zawartosc) - IleZnaczkow - 1 > 0) //oczekiwana jest zawartosc komorki w cudzyslowiach zakonczona przecinkiem lub znakiem konca linii
+		if (len - 2 * a > 0)
 		{
-			(*head)->ZawartoscKomorki = malloc(strlen(zawartosc) - IleZnaczkow - 1);
-			for (i; i < strlen(zawartosc)-1; i++)
+			(*head)->ZawartoscKomorki = malloc(len - 2 * a + 1);
+			for (int i = 0; i < len - 2 * a; i++)
 			{
-				(*head)->ZawartoscKomorki[i] = zawartosc[i + (IleZnaczkow/2)];
+				(*head)->ZawartoscKomorki[i] = zawartosc[i - a];
+
 			}
-			(*head)->ZawartoscKomorki[i] = 0; //zapisywana jest zawartosc komorki zakonczona znakiem '\0'
+			(*head)->ZawartoscKomorki[len - 2 * a] = 0; //zapisywana jest zawartosc komorki zakonczona znakiem '\0'
 		}
 		else
 		{
@@ -223,14 +242,15 @@ void DodajKomorke(struct kolumna** head, char* zawartosc, char IleZnaczkow)
 	}
 	tmp->nast = malloc(sizeof(struct kolumna));
 	tmp->nast->nast = NULL;
-	if (strlen(zawartosc) - 3 > 0) //oczekiwana jest zawartosc komorki w cudzyslowiach zakonczona przecinkiem lub znakiem konca linii
+	
+	if (len - 2 * a > 0) //oczekiwana jest zawartosc komorki w cudzyslowiach zakonczona przecinkiem lub znakiem konca linii
 	{
-		tmp->nast->ZawartoscKomorki = malloc(strlen(zawartosc) - IleZnaczkow);
-		for (i; i < strlen(zawartosc) - 1; i++)
+		tmp->nast->ZawartoscKomorki = malloc(len - 2 * a + 1);
+		for (int i = 0; i < len - 2 * a; i++)
 		{
-			tmp->nast->ZawartoscKomorki[i] = zawartosc[i + (IleZnaczkow / 2) - 1];
+			tmp->nast->ZawartoscKomorki[i] = zawartosc[i - a];
 		}
-		tmp->nast->ZawartoscKomorki[i] = 0; //zapisywana jest zawartosc komorki zakonczona znakiem '\0'
+		tmp->nast->ZawartoscKomorki[len - 2 * a] = 0; //zapisywana jest zawartosc komorki zakonczona znakiem '\0'
 	}
 	else
 	{
@@ -246,7 +266,10 @@ void UsunListe(struct wiersz** head)
 	{
 		while ((*head)->komorka!=NULL)
 		{
-			if ((*head)->komorka->ZawartoscKomorki != NULL) free((*head)->komorka->ZawartoscKomorki);
+			if ((*head)->komorka->ZawartoscKomorki != NULL)
+			{
+				free((*head)->komorka->ZawartoscKomorki);
+			}
 			tmpk = (*head)->komorka;
 			(*head)->komorka = (*head)->komorka->nast;
 			free(tmpk);
@@ -256,4 +279,38 @@ void UsunListe(struct wiersz** head)
 		free(tmpw);
 	}
 	*head = NULL;
+}
+
+void WypiszTablice(char*** tablica, int x, int y)
+{
+	for (int j = 0; j < y - 1; j++)
+	{
+		for (int i = 0; i < x-1; i++)
+		{
+			if (tablica[j][i]!=NULL)
+			{
+				printf("%s,", tablica[j][i]);
+			}
+			else
+			{
+				printf(",");
+			}
+		}
+		if (tablica[j][x - 1] != NULL)
+		{
+			printf("%s", tablica[j][x - 1]);
+		}
+		printf("\n");
+	}
+	for (int i = 0; i < x - 1; i++)
+	{
+		if (tablica[y - 1][i] != NULL)
+		{
+			printf("%s,", tablica[y - 1][i]);
+		}
+		else
+		{
+			printf(",");
+		}
+	}
 }

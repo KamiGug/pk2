@@ -120,5 +120,6 @@ int main()
 	}
 	
 	free(name);
+	free(buff);
 	return 0;
 }
